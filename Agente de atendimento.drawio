@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0" version="28.2.5">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1477" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eoEKD44s0ywYprMZgLv6-1" value="Agente M D BANK — Atendimento Agentic" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="140" width="420" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-2" value="Cliente / Usuário “Quero atendimento”" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="620" y="240" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-3" value="AG-UI / Canal de Atendimento Chat, App, WhatsApp, Web Streaming + eventos + HITL" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="860" y="230" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-4" value="BFA — Backend for Agents Auth, sessão, auditoria, rate limit, mascaramento de dados" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="230" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-5" value="Supervisor / Roteador Inteligente Classifica intenção, decide Single ou MultiAgent, acompanha estado" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="920" y="390" width="330" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-6" value="Context Engineering Memória + perfil + políticas + histórico + RAG + instruções dinâmicas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="385" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-7" value="Fluxo Single Agent Atendimento simples responde direto com ferramentas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="640" y="570" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-8" value="Agente Abertura de Conta KYC, proposta, documentos, status" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="940" y="570" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-9" value="Agente Cartão de Crédito Elegibilidade, limite, proposta, acompanhamento" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="570" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-10" value="Novo Agente de Atendimento Dúvidas gerais, triagem, recuperação de jornada, FAQ humanizado" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="570" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-11" value="Agente Segurança / Compliance Fraude, LGPD, validações, guardrails, aprovação humana" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="740" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-12" value="Ferramentas via MCP CRM • Core Banking • Cadastro • Score • Documentos • FAQ • Banco de Dados" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="890" y="900" width="620" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-13" value="A2A — Comunicação entre agentes quando uma jornada exige colaboração entre especialistas" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1580" y="740" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-14" value="Humano no Loop Atendente / Backoffice aprovação ou exceção" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fontSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="620" y="750" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-15" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-2" target="eoEKD44s0ywYprMZgLv6-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-16" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-3" target="eoEKD44s0ywYprMZgLv6-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-17" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-4" target="eoEKD44s0ywYprMZgLv6-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-18" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-5" target="eoEKD44s0ywYprMZgLv6-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-19" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-5" target="eoEKD44s0ywYprMZgLv6-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-20" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-5" target="eoEKD44s0ywYprMZgLv6-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-21" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-5" target="eoEKD44s0ywYprMZgLv6-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-22" value="contexto" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;strokeColor=#82b366;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-6" target="eoEKD44s0ywYprMZgLv6-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-23" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-8" target="eoEKD44s0ywYprMZgLv6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-24" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-9" target="eoEKD44s0ywYprMZgLv6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-25" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-10" target="eoEKD44s0ywYprMZgLv6-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-26" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-7" target="eoEKD44s0ywYprMZgLv6-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-27" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-8" target="eoEKD44s0ywYprMZgLv6-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-28" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-9" target="eoEKD44s0ywYprMZgLv6-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-29" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-10" target="eoEKD44s0ywYprMZgLv6-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-30" value="exceção / aprovação" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-11" target="eoEKD44s0ywYprMZgLv6-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-31" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;strokeColor=#d6b656;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-8" target="eoEKD44s0ywYprMZgLv6-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-32" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;strokeColor=#d6b656;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-9" target="eoEKD44s0ywYprMZgLv6-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-33" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;strokeColor=#d6b656;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-10" target="eoEKD44s0ywYprMZgLv6-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eoEKD44s0ywYprMZgLv6-34" value="resultado consolidado" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;strokeColor=#d6b656;" edge="1" parent="1" source="eoEKD44s0ywYprMZgLv6-13" target="eoEKD44s0ywYprMZgLv6-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
