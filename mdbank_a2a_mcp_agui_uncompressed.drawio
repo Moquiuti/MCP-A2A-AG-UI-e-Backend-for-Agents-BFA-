@@ -1,0 +1,241 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="mdbank-a2a-mcp-agui" name="Arquitetura A2A MCP AG-UI">
+    <mxGraphModel dx="2271" dy="1253" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1320" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;" value="Agente MD BANK - Arquitetura A2A + MCP + AG-UI" vertex="1">
+          <mxGeometry height="40" width="620" x="330" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" value="AG-UI para experiencia do usuario | A2A para comunicacao entre agentes | MCP para acesso a ferramentas e sistemas" vertex="1">
+          <mxGeometry height="30" width="680" x="310" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Cliente" vertex="1">
+          <mxGeometry height="100" width="60" x="40" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="agui_lane" parent="1" style="swimlane;html=1;startSize=28;horizontal=1;rounded=1;arcSize=8;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;" value="AG-UI Protocol - Camada de interacao com usuario" vertex="1">
+          <mxGeometry height="165" width="980" x="135" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="channel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="App / Web / WhatsApp Entrada do atendimento" vertex="1">
+          <mxGeometry height="70" width="190" x="170" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="agui_runtime" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="AG-UI Runtime Eventos, mensagens, streaming e estado da UI" vertex="1">
+          <mxGeometry height="90" width="220" x="410" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="human_events" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Eventos AG-UI TextMessageStart TextMessageContent ToolCallStart ToolCallResult StateDelta" vertex="1">
+          <mxGeometry height="120" width="220" x="690" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="handoff_ui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" value="Componentes de UI Formulario, confirmacao, card de status e aprovacao humana" vertex="1">
+          <mxGeometry height="90" width="220" x="950" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="bfa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;fontStyle=1;" value="BFA Backend for Agents Auth, sessao, auditoria, LGPD, rate limit e logs" vertex="1">
+          <mxGeometry height="95" width="250" x="285" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="supervisor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;fontStyle=1;" value="Supervisor / Roteador Inteligente Classifica intencao, orquestra jornada e decide Single ou MultiAgent" vertex="1">
+          <mxGeometry height="95" width="300" x="615" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="context" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" value="Context Engineering Historico, memoria, perfil, politicas, instrucoes dinamicas, RAG e prompts" vertex="1">
+          <mxGeometry height="110" width="260" x="980" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="intent1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="Intencao: Quero um cartao de credito" vertex="1">
+          <mxGeometry height="70" width="190" x="140" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="intent2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="Intencao: Quero abrir uma conta" vertex="1">
+          <mxGeometry height="70" width="190" x="370" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="intent3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="Intencao: Quero saber sobre o MDBank" vertex="1">
+          <mxGeometry height="70" width="190" x="600" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="a2a_lane" parent="1" style="swimlane;html=1;startSize=28;horizontal=1;rounded=1;arcSize=8;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;" value="A2A Protocol - Comunicacao e colaboracao entre agentes" vertex="1">
+          <mxGeometry height="300" width="1010" x="120" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="a2a_client" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" value="A2A Client no Supervisor Cria task, envia mensagem, acompanha status e recebe artefatos" vertex="1">
+          <mxGeometry height="100" width="230" x="160" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="a2a_registry" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" value="A2A Registry Agent Cards, skills, endpoints e capacidades" vertex="1">
+          <mxGeometry height="90" width="220" x="450" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="a2a_gateway" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" value="A2A Gateway / Broker Descoberta, seguranca, tracing, autorizacao e roteamento" vertex="1">
+          <mxGeometry height="90" width="260" x="720" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="agent_account" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="A2A Server Agente Abertura de Conta KYC, documentos, criacao e status da conta" vertex="1">
+          <mxGeometry height="80" width="230" x="160" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="agent_support" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="A2A Server Agente Atendimento ao Cliente FAQ, duvidas gerais, triagem e orientacao" vertex="1">
+          <mxGeometry height="80" width="230" x="450" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="agent_card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="A2A Server Agente Cartao de Credito Elegibilidade, limite, proposta e acompanhamento" vertex="1">
+          <mxGeometry height="80" width="230" x="740" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="agent_comp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;fontStyle=1;" value="A2A Server Agente Compliance Guardrails, fraude, LGPD e risco" vertex="1">
+          <mxGeometry height="95" width="220" x="1020" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp_lane" parent="1" style="swimlane;html=1;startSize=28;horizontal=1;rounded=1;arcSize=8;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;" value="MCP Protocol - Recursos, ferramentas, dados e sistemas externos" vertex="1">
+          <mxGeometry height="330" width="1010" x="120" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp_client" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" value="MCP Clients nos agentes Chamadas padronizadas de tools e recursos" vertex="1">
+          <mxGeometry height="90" width="230" x="160" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp_catalog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" value="MCP Tool Catalog Schemas, permissoes, descricao e contratos" vertex="1">
+          <mxGeometry height="90" width="220" x="450" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp_gateway" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" value="MCP Gateway Credenciais, politicas, logs, controle de execucao e observabilidade" vertex="1">
+          <mxGeometry height="105" width="260" x="720" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="tool1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="MCP Tool consultar_conta" vertex="1">
+          <mxGeometry height="55" width="180" x="150" y="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="tool2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="MCP Tool consultar_cartao" vertex="1">
+          <mxGeometry height="55" width="180" x="355" y="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="tool3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="MCP Tool criar_ou_buscar_conta" vertex="1">
+          <mxGeometry height="55" width="190" x="560" y="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="tool4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#ffffff;strokeColor=#000000;fontSize=13;" value="MCP Tool solicitar_cartao" vertex="1">
+          <mxGeometry height="55" width="180" x="775" y="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="tool5" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="MCP Resource prompts e templates abrir_conta_prompt solicitar_cartao_prompt" vertex="1">
+          <mxGeometry height="85" width="220" x="980" y="1095" as="geometry" />
+        </mxCell>
+        <mxCell id="crm" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="CRM / Cadastro" vertex="1">
+          <mxGeometry height="70" width="150" x="230" y="1195" as="geometry" />
+        </mxCell>
+        <mxCell id="core" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Core Banking" vertex="1">
+          <mxGeometry height="70" width="150" x="460" y="1195" as="geometry" />
+        </mxCell>
+        <mxCell id="credit" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Motor de Credito" vertex="1">
+          <mxGeometry height="70" width="150" x="690" y="1195" as="geometry" />
+        </mxCell>
+        <mxCell id="kb" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Base de Conhecimento FAQ / RAG" vertex="1">
+          <mxGeometry height="70" width="180" x="920" y="1195" as="geometry" />
+        </mxCell>
+        <mxCell id="human" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;fontStyle=1;" value="Humano no Loop Aprovacoes, excecoes, contestacoes e atendimento assistido" vertex="1">
+          <mxGeometry height="95" width="230" x="1180" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="obs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;fontStyle=1;" value="Observabilidade Logs, traces, metricas, auditoria e replay de jornada" vertex="1">
+          <mxGeometry height="95" width="230" x="1180" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" value="Resumo: AG-UI padroniza a experiencia e os eventos na interface. A2A padroniza a comunicacao entre agentes especialistas. MCP padroniza o acesso dos agentes a tools, recursos e sistemas externos. O Supervisor orquestra a jornada e o BFA protege a entrada corporativa." vertex="1">
+          <mxGeometry height="210" width="270" x="1180" y="875" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_channel" edge="1" parent="1" source="user" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="channel" value="mensagem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_channel_runtime" edge="1" parent="1" source="channel" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="agui_runtime" value="AG-UI">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_runtime_events" edge="1" parent="1" source="agui_runtime" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="human_events" value="emite eventos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_events_ui" edge="1" parent="1" source="human_events" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="handoff_ui" value="atualiza interface">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_runtime_bfa" edge="1" parent="1" source="agui_runtime" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="bfa" value="requisicao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bfa_super" edge="1" parent="1" source="bfa" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="supervisor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_context_super" edge="1" parent="1" source="context" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="supervisor" value="contexto">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_super_runtime" edge="1" parent="1" source="supervisor" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;" target="agui_runtime" value="resposta / eventos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_super_i1" edge="1" parent="1" source="supervisor" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;" target="intent1" value="roteia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_super_i2" edge="1" parent="1" source="supervisor" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;" target="intent2" value="roteia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_super_i3" edge="1" parent="1" source="supervisor" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;" target="intent3" value="roteia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_super_a2ac" edge="1" parent="1" source="supervisor" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="a2a_client" value="delegacao A2A">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a2ac_reg" edge="1" parent="1" source="a2a_client" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="a2a_registry" value="descobre skills">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a2ac_gw" edge="1" parent="1" source="a2a_client" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="a2a_gateway" value="tasks/mensagens">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_reg_gw" edge="1" parent="1" source="a2a_registry" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="a2a_gateway" value="agent cards">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gw_account" edge="1" parent="1" source="a2a_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="agent_account" value="task">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gw_support" edge="1" parent="1" source="a2a_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="agent_support" value="task">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gw_card" edge="1" parent="1" source="a2a_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="agent_card" value="task">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_gw_comp" edge="1" parent="1" source="a2a_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="agent_comp" value="validacao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_acc_mcp" edge="1" parent="1" source="agent_account" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="mcp_client" value="usa MCP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sup_mcp" edge="1" parent="1" source="agent_support" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="mcp_client" value="usa MCP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_card_mcp" edge="1" parent="1" source="agent_card" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="mcp_client" value="usa MCP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mcp_client_catalog" edge="1" parent="1" source="mcp_client" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="mcp_catalog" value="consulta contrato">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mcp_client_gateway" edge="1" parent="1" source="mcp_client" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="mcp_gateway" value="executa tool">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mcp_gateway_t1" edge="1" parent="1" source="mcp_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="tool1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mcp_gateway_t2" edge="1" parent="1" source="mcp_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="tool2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mcp_gateway_t3" edge="1" parent="1" source="mcp_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="tool3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mcp_gateway_t4" edge="1" parent="1" source="mcp_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="tool4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mcp_gateway_t5" edge="1" parent="1" source="mcp_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="tool5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tool1_core" edge="1" parent="1" source="tool1" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="core" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tool2_credit" edge="1" parent="1" source="tool2" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="credit" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tool3_crm" edge="1" parent="1" source="tool3" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="crm" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tool4_credit" edge="1" parent="1" source="tool4" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="credit" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tool5_kb" edge="1" parent="1" source="tool5" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="kb" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_comp_human" edge="1" parent="1" source="agent_comp" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="human" value="escalona">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_human_ui" edge="1" parent="1" source="human" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="handoff_ui" value="aprovacao na UI">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bfa_obs" edge="1" parent="1" source="bfa" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="obs" value="logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a2a_obs" edge="1" parent="1" source="a2a_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="obs" value="traces A2A">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mcp_obs" edge="1" parent="1" source="mcp_gateway" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="obs" value="traces MCP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
